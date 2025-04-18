@@ -1,0 +1,21 @@
+{
+  "name": "apps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "fe",
+    "be"
+  ],
+  "scripts": {
+    "dev:fe": "npm --prefix fe run dev",
+    "dev:be": "npm --prefix be run start:dev",
+    "dev": "concurrently \"npm run dev:be\" \"npm run dev:fe\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
